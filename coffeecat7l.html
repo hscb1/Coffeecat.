@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Cat ☕🐱</title>
+
+  <style>
+    body {
+      background: #f5efe6;
+      color: #3b2f2f;
+      line-height: 1.6;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #6f4e37;
+      color: white;
+      padding: 30px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
+    nav button {
+      background: #d9b382;
+      border: none;
+      padding: 10px 15px;
+      margin: 5px;
+      cursor: pointer;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    nav button:hover {
+      background: #c19a6b;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2, h3 {
+      color: #6f4e37;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    .menu-list li {
+      list-style: none;
+      border-bottom: 1px solid #ddd;
+      padding: 10px;
+    }
+
+    .menu-list li:last-child {
+      border-bottom: none;
+    }
+
+    .equipe li {
+      margin-bottom: 8px;
+    }
+
+    footer {
+      background: #6f4e37;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    /* MENU LATERAL */
+
+    .menu-lateral {
+      position: fixed;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 2000;
+    }
+
+    .menu-lateral button {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: none;
+      background: #6f4e37;
+      color: white;
+      font-size: 11px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+    }
+
+    .menu-lateral button:hover {
+      background: #c19a6b;
+      transform: scale(1.15) rotate(5deg);
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- MENU LATERAL -->
+<div class="menu-lateral">
+  <button onclick="irPara('comidas')">🍰<br>Comidas</button>
+  <button onclick="irPara('bebidas')">☕<br>Bebidas</button>
+  <button onclick="irPara('acessorios')">🐾<br>Itens</button>
+</div>
+
+<header>
+  <h1>Coffee Cat</h1>
+  <p>Felicidade tem gosto de café</p>
+
+  <nav>
+    <button onclick="irPara('sobre')">Sobre</button>
+    <button onclick="irPara('historia')">História</button>
+    <button onclick="irPara('empresa')">Empresa</button>
+    <button onclick="irPara('cultura')">Cultura</button>
+    <button onclick="irPara('gestao')">Gestão</button>
+    <button onclick="irPara('social')">Social</button>
+    <button onclick="irPara('swot')">SWOT</button>
+    <button onclick="irPara('equipe')">Equipe</button>
+    <button onclick="irPara('cardapio')">Cardápio</button>
+  </nav>
+</header>
+
+<section id="sobre">
+  <h2>O que é o Coffee Cat?</h2>
+  <p>
+    O Coffee Cat é um espaço acolhedor que une café de qualidade e interação
+    direta com gatos resgatados.
+  </p>
+</section>
+
+<section id="historia">
+  <h2>Nossa História</h2>
+  <p>
+    Criamos um ambiente onde o café aquece as mãos
+    e os gatos aquecem o coração.
+  </p>
+</section>
+
+<section id="empresa">
+  <h2>Identificação da Empresa</h2>
+  <p><strong>Nome:</strong> Cafeteria Rodrigues Santos Reis LTDA</p>
+  <p><strong>Fantasia:</strong> Coffee Cat</p>
+  <p><strong>Local:</strong> Sete Lagoas – MG</p>
+</section>
+
+<section id="cultura">
+  <h2>Cultura Organizacional</h2>
+  <p>
+    Bem-estar animal, hospitalidade e responsabilidade social.
+  </p>
+</section>
+
+<section id="gestao">
+  <h2>Gestão</h2>
+  <ul>
+    <li>Atendimento</li>
+    <li>Capacitação</li>
+    <li>Rotina</li>
+  </ul>
+</section>
+
+<section id="social">
+  <h2>Responsabilidade Social</h2>
+  <p>
+    Resgate, castração e adoção de gatos.
+  </p>
+</section>
+
+<section id="swot">
+  <h2>Análise SWOT</h2>
+
+  <h3>Forças</h3>
+  <ul>
+    <li>Ambiente temático</li>
+    <li>Parcerias</li>
+  </ul>
+
+  <h3>Fraquezas</h3>
+  <ul>
+    <li>Custos</li>
+  </ul>
+
+  <h3>Oportunidades</h3>
+  <ul>
+    <li>Eventos</li>
+  </ul>
+
+  <h3>Ameaças</h3>
+  <ul>
+    <li>Concorrência</li>
+  </ul>
+</section>
+
+<section id="equipe">
+  <h2>Equipe</h2>
+  <ul class="equipe">
+    <li>Mateus (Líder)</li>
+    <li>Isabella</li>
+    <li>Melrilly</li>
+    <li>Ana Luiza</li>
+    <li>Eduarda</li>
+  </ul>
+</section>
+
+<section id="cardapio">
+  <h2>☕🐱 Cardápio</h2>
+
+  <h3 id="comidas">🍰 Comidas</h3>
+  <ul class="menu-list">
+    <li>Bolo de Chocolate</li>
+    <li>Pão de Queijo</li>
+    <li>Cookie</li>
+    <li>Torta de Limão</li>
+  </ul>
+
+  <h3 id="bebidas">☕ Bebidas</h3>
+  <ul class="menu-list">
+    <li>Café Expresso</li>
+    <li>Cappuccino</li>
+    <li>Chocolate Quente</li>
+    <li>Suco Natural</li>
+  </ul>
+
+  <h3 id="acessorios">🐾 Acessórios</h3>
+  <ul class="menu-list">
+    <li>Caneca</li>
+    <li>Camiseta</li>
+    <li>Chaveiro</li>
+    <li>Adesivos</li>
+  </ul>
+</section>
+
+<footer>
+  <p>© Coffee Cat — Cafeteria & Adoção de Gatos</p>
+  <p>Instagram: @Coffee_Cat_LTDA</p>
+</footer>
+
+<script>
+  function irPara(id) {
+    document.getElementById(id).scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
+
+  // Animação ao rolar
+  const sections = document.querySelectorAll('section');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
+</body>
+</html>
